@@ -12,10 +12,10 @@ body {
   display: flex;
   height: 70vh;
   width: 100%;
-  gap:2px;
+  gap: 2px;
 }
 .travel-cards {
-    flex: 1;
+  flex: 1;
   min-width: 0;
 
   background-position: center;
@@ -62,9 +62,9 @@ body {
   flex: 2.2;
 }
 
-.cards-overlay{
-  background: linear-gradient(to top,rgba(0, 0, 0, 0.75),transparent);
-  inset:0;
+.cards-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  inset: 0;
   position: absolute;
   z-index: 0;
 }
@@ -88,9 +88,24 @@ body {
   line-height: 1.2;
   margin-bottom: 12px;
 }
-.text span {
-  color: #5145cd;
+.text .letter {
+  display: inline-block;
+  color: #17172f;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
 }
+.text .letter:hover {
+  transform: scale(1, 2);
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 .subtitle {
   text-align: center;
   font-size: 16px;
@@ -129,7 +144,7 @@ body {
   pointer-events: none;
   transition: transform 0.15s ease-out;
 }
-.inner-circle{
+.inner-circle {
   width: 10px;
   height: 10px;
   border-radius: 50%;
