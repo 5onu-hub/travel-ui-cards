@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafafa;
+  color: #17172f;
+}
+.travel-container {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  gap:2px;
+}
+.travel-cards {
+    flex: 1;
+  min-width: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: flex 0.5s ease;
+}
+
+.travel-container:hover .travel-cards {
+  background-size: 110% 110%;
+  flex: 1;
+}
+.travel-cards:hover {
+  flex: 2.5;
+}
+.travel-container .travel-cards:hover {
+  flex: 3;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: white;
+  z-index: 1;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  max-width: 200px;
+}
+
+.card-content span {
+  font-size: 28px;
+  font-weight: bold;
+}
+.travel-cards.featured {
+  flex: 2.2;
+}
+
+.cards-overlay{
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.75),transparent);
+  inset:0;
+  position: absolute;
+  z-index: 0;
+}
+.text-container {
+  min-height: 100vh;
+  padding: 50px 5%;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(to right, #eaeaea 1px, transparent 1px),
+    linear-gradient(to bottom, #eaeaea 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+.text {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.text span {
+  color: #5145cd;
+}
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #77778a;
+  margin-bottom: 35px;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 600px) {
+  .text-container {
+    padding: 35px 16px;
+  }
+
+  .text {
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+}
+/* cursor effect */
+/* Cursor effect */
+.cursor {
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid black;
+  border-radius: 50%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+  pointer-events: none;
+  transition: transform 0.15s ease-out;
+}
+.inner-circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
