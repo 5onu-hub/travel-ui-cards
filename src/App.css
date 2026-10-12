@@ -34,18 +34,27 @@ body {
   flex: 1;
 }
 .travel-cards:hover {
-  flex: 2.5;
+  flex: 10.5;
 }
 .travel-container .travel-cards:hover {
-  flex: 3;
+  flex: 10;
 }
 
 .card-content {
+  color: white;
+  z-index: 1;
+}
+.card-content span{
+  position: absolute;
+  top: 20px;
+  left: 15px;
+
+}
+.card-content h3{
   position: absolute;
   bottom: 20px;
   left: 15px;
-  color: white;
-  z-index: 1;
+
 }
 
 .card-content h3 {
